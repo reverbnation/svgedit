@@ -141,16 +141,23 @@ const callbacks = [],
   * @type {string[]}
   */
   defaultExtensions = [
-    'ext-connector.js',
-    'ext-eyedropper.js',
-    'ext-grid.js',
-    'ext-imagelib.js',
-    'ext-markers.js',
+    // 'ext-connector.js',
+    // 'ext-eyedropper.js',
+    // 'ext-grid.js',
+    // 'ext-imagelib.js',
+    // 'ext-markers.js',
     'ext-overview_window.js',
-    'ext-panning.js',
-    'ext-polygon.js',
-    'ext-shapes.js',
-    'ext-star.js',
+    // 'ext-panning.js',
+    // 'ext-polygon.js',
+    // 'ext-shapes.js',
+    'ext-svgshapes.js',
+    // 'ext-star.js',
+    // 'ext-closepath.js',
+    // 'ext-php_savefile.js',
+    // 'ext-push_message_save.js',
+    // 'ext-server_moinsave.js',
+    // 'ext-server_opensave.js',
+    'ext-arrows.js',
     'ext-storage.js'
   ],
   /**
@@ -223,11 +230,11 @@ const callbacks = [],
     canvasName: 'default',
     canvas_expansion: 3,
     initFill: {
-      color: 'FF0000', // solid red
-      opacity: 1
+      color: '000000', 
+      opacity: 0
     },
     initStroke: {
-      width: 5,
+      width: 1,
       color: '000000', // solid black
       opacity: 1
     },
@@ -261,7 +268,7 @@ const callbacks = [],
     gridColor: '#000',
     baseUnit: 'px',
     snappingStep: 10,
-    showRulers: true,
+    showRulers: false,
     // URL BEHAVIOR CONFIGURATION
     preventAllURLConfig: false,
     preventURLContentLoading: false,
