@@ -1,9 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <g id="tool_svgshapelib">
     <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-      <path fill="#c0c0c0" stroke-linejoin="round" stroke-width="14" stroke="#202020" fill-rule="nonzero" d="m70,194.72501l0,0c0,-10.30901 35.8172,-18.666 80,-18.666c44.18298,0 80,8.35699 80,18.666l0,74.66699c0,10.30899 -35.81702,18.66699 -80,18.66699c-44.1828,0 -80,-8.358 -80,-18.66699l0,-74.66699z"/>
-      <path fill="#c0c0c0" stroke-linejoin="round" stroke-width="14" stroke="#202020" fill-rule="nonzero" d="m70,114.608l0,0c0,-10.309 35.8172,-18.6668 80,-18.6668c44.18298,0 80,8.3578 80,18.6668l0,74.66699c0,10.30901 -35.81702,18.666 -80,18.666c-44.1828,0 -80,-8.35699 -80,-18.666l0,-74.66699z"/>
-      <path id="svg_1" fill="#c0c0c0" stroke-linejoin="round" stroke-width="14" stroke="#202020" fill-rule="nonzero" d="m230,32.33334c0,10.30931 -35.81726,18.66666 -80,18.66666c-44.1828,0 -80,-8.35735 -80,-18.66666"/>
+      <ellipse cx="206.5" cy="95.5" fill="#ffffff" id="svg_1" rx="86.5" ry="86.5" stroke="#000000" stroke-width="7"/>
+      <path d="m6.8,170.29811l62.7931,0l0,-62.7931l64.4138,0l0,62.7931l62.7931,0l0,64.41381l-62.7931,0l0,62.7931l-64.4138,0l0,-62.7931l-62.7931,0l0,-64.41381z" fill="#ffffff" id="svg_2" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="7" transform="rotate(45 101.8 202.505)"/>
     </svg>
   </g>
 </svg>

@@ -27,21 +27,22 @@ export default {
     const library = {
       basic: {
         data: {
-          blue_triangle: ['<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 38.43 38.43"><g><polygon points="19.22 0 0 33.28 38.43 33.28 19.22 0" style="fill:#364fc7"/></g></svg></svg>',38.43],
-          red_circle: ['<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 31.95 31.95"><circle cx="15.98" cy="15.98" r="15.98" style="fill:#eb244c"/></svg></svg>',38.43],
-          square: ['<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 300 300"><path fill="none" stroke="#000" stroke-width="3" d="m0,0l300,0l0,300l-300,0z"/></svg></svg>',300],
-          diamond: ['<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,150l149,-149l149,149l-149,149l-149,-149z"/></svg></svg>',300],
-          pentagon: ['<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1.00035,116.97758l148.99963,-108.4053l148.99998,108.4053l-56.91267,175.4042l-184.1741,0l-56.91284,-175.4042z"/></svg></svg>',300],
-          hexagon: ['<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,149.99944l63.85715,-127.71428l170.28572,0l63.85713,127.71428l-63.85713,127.71428l-170.28572,0l-63.85715,-127.71428z"/></svg></svg>',300],
-          star_points_5: ['<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,116.58409l113.82668,0l35.17332,-108.13487l35.17334,108.13487l113.82666,0l-92.08755,66.83026l35.17514,108.13487l-92.08759,-66.83208l-92.08757,66.83208l35.17515,-108.13487l-92.08758,-66.83026z"/></svg></svg>',300],
-          arrow_up: ['<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1.49805,149.64304l148.50121,-148.00241l148.50121,148.00241l-74.25061,0l0,148.71457l-148.5012,0l0,-148.71457z"/></svg></svg>',300],
-          uml_actor: ['<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m40.5,100l219,0m-108.99991,94.00006l107,105m-107.00009,-106.00006l-100,106m99.5,-231l0,125m33.24219,-158.75781c0,18.35916 -14.88303,33.24219 -33.24219,33.24219c-18.35916,0 -33.2422,-14.88303 -33.2422,-33.24219c0.00002,-18.35915 14.88304,-33.24219 33.2422,-33.24219c18.35916,0 33.24219,14.88304 33.24219,33.24219z"/></svg></svg>',300],
-          cross: ['<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m0.99844,99.71339l98.71494,0l0,-98.71495l101.26279,0l0,98.71495l98.71495,0l0,101.2628l-98.71495,0l0,98.71494l-101.26279,0l0,-98.71494l-98.71494,0z"/></svg></svg>',300]
+          blue_triangle: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 38.43 38.43"><g><polygon points="19.22 0 0 33.28 38.43 33.28 19.22 0" style="fill:#364fc7"/></g></svg></svg>',
+          red_circle: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 31.95 31.95"><circle cx="15.98" cy="15.98" r="15.98" style="fill:#eb244c"/></svg></svg>',
+          square: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 300 300"><path fill="none" stroke="#000" stroke-width="3" d="m0,0l300,0l0,300l-300,0z"/></svg></svg>',
+          diamond: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,150l149,-149l149,149l-149,149l-149,-149z"/></svg></svg>',
+          pentagon: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1.00035,116.97758l148.99963,-108.4053l148.99998,108.4053l-56.91267,175.4042l-184.1741,0l-56.91284,-175.4042z"/></svg></svg>',
+          hexagon: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,149.99944l63.85715,-127.71428l170.28572,0l63.85713,127.71428l-63.85713,127.71428l-170.28572,0l-63.85715,-127.71428z"/></svg></svg>',
+          star_points_5: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,116.58409l113.82668,0l35.17332,-108.13487l35.17334,108.13487l113.82666,0l-92.08755,66.83026l35.17514,108.13487l-92.08759,-66.83208l-92.08757,66.83208l35.17515,-108.13487l-92.08758,-66.83026z"/></svg></svg>',
+          arrow_up: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1.49805,149.64304l148.50121,-148.00241l148.50121,148.00241l-74.25061,0l0,148.71457l-148.5012,0l0,-148.71457z"/></svg></svg>',
+          man: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m125.90131,25.2503c0,-13.33112 10.79823,-24.12934 24.12934,-24.12934c13.33113,0 24.12932,10.79822 24.12932,24.12934c0,13.33112 -10.79819,24.12934 -24.12932,24.12934c-13.33113,0 -24.12934,-10.79822 -24.12934,-24.12934zm81.12696,68.30144l0,-12.18601c0,-12.82147 -10.38806,-23.21696 -23.21696,-23.21696l-67.63607,0c-12.82147,0 -23.21695,10.39549 -23.21695,23.21696l0,12.18601c-0.02242,0.2766 -0.03739,0.56071 -0.03739,0.84853l0,70.18918c0,5.4538 4.41839,9.87215 9.87218,9.87215c5.44633,0 9.87589,-4.41837 9.87589,-9.87215l0,-69.14999l6.62006,0l0,79.02961l0.04859,0l0,111.66646c0,7.25925 5.89491,13.15787 13.16164,13.15787c7.27048,0 13.16164,-5.89114 13.16164,-13.15787l0,-111.66646l8.68347,0l0,111.66646c0,7.25925 5.89856,13.15787 13.16162,13.15787c7.27045,0 13.16161,-5.89114 13.16161,-13.15787l0,-111.66646l0.04112,0l0,-79.02961l6.62007,0l0,69.14623c0,5.45381 4.42955,9.8759 9.8759,9.8759c5.45386,0 9.87218,-4.42209 9.87218,-9.8759l0,-70.18916c-0.00371,-0.29156 -0.02617,-0.56819 -0.0486,-0.8448z" style="fill:#eee"/></svg></svg>',
+          uml_actor: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m40.5,100l219,0m-108.99991,94.00006l107,105m-107.00009,-106.00006l-100,106m99.5,-231l0,125m33.24219,-158.75781c0,18.35916 -14.88303,33.24219 -33.24219,33.24219c-18.35916,0 -33.2422,-14.88303 -33.2422,-33.24219c0.00002,-18.35915 14.88304,-33.24219 33.2422,-33.24219c18.35916,0 33.24219,14.88304 33.24219,33.24219z"/></svg></svg>',
+          cross: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m0.99844,99.71339l98.71494,0l0,-98.71495l101.26279,0l0,98.71495l98.71495,0l0,101.2628l-98.71495,0l0,98.71494l-101.26279,0l0,-98.71494l-98.71494,0z"/></svg></svg>'
         },
         buttons: []
       }
     };
-
+  
     const modeId = 'svgshapelib';
     const startClientPos = {};
 
@@ -69,6 +70,7 @@ export default {
     * @returns {undefined}
     */
     function makeButtons (cat, shapes) {
+      console.log("Make buttons for " + cat + " out of " + shapes);
       const shapeIcon = new DOMParser().parseFromString(
         '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"></svg>',"image/svg+xml"
       );
@@ -79,8 +81,7 @@ export default {
 
       curLib.buttons = Object.entries(data).map(([id, item]) => {
         const icon = svgElem.clone();
-        //console.log(item[1] + " - " + item[0]);
-        let newNode = new DOMParser().parseFromString(item[0], "image/svg+xml");
+        let newNode = new DOMParser().parseFromString(item, "image/svg+xml");
         icon.append(newNode.documentElement);
 
         const iconBtn = icon.wrap('<div class="tool_button">').parent().attr({
@@ -96,6 +97,9 @@ export default {
       const result = {};
       if (dom.tagName == "svg") {
         return convertDomToJson(dom.firstChild);
+      } else if (dom.tagName == "title") {
+        console.log("ERROR: title tag not supported, please remove from svg shapel definition");
+        return {};
       } else {
         result['element']=dom.tagName
         const attr = {};
@@ -129,8 +133,11 @@ export default {
       const lib = library[catId];
 
       if (!lib) {
+        console.log("load library for " + catId + " from " + svgEditor.curConfig.extIconsPath + 'svgshapelib/' + catId + '.json');
+
         $('#svgshape_buttons').html(strings.loading);
-        $.getJSON(svgEditor.curConfig.extIconsPath + 'shapelib/' + catId + '.json', function (result) {
+        $.getJSON(svgEditor.curConfig.extIconsPath + 'svgshapelib/' + catId + '.json', function (result) {
+          console.log("library loaded " + result.data);
           curLib = library[catId] = {
             data: result.data,
             size: result.size,
@@ -138,6 +145,14 @@ export default {
           };
           makeButtons(catId, result);
           loadIcons();
+        }).done(function() {
+          console.log( "second success" );
+        })
+        .fail(function() {
+          console.log( "error" );
+        })
+        .always(function() {
+          console.log( "complete" );
         });
         return;
       }
@@ -230,6 +245,7 @@ export default {
           const catlink = $(this);
           catlink.siblings().removeClass('current');
           catlink.addClass('current');
+          console.log("mouse up on "+ catlink.attr('data-cat'));
 
           loadLibrary(catlink.attr('data-cat'));
           // Get stuff
@@ -241,6 +257,7 @@ export default {
         $('#tools_svgshapelib').append(shapeCats);
 
         shower.mouseup(function () {
+          console.log("shower mouse up " + currentD + ":" + modeId);
           canv.setMode(currentD ? modeId : 'select');
         });
         $('#tool_svgshapelib').remove();
@@ -274,7 +291,7 @@ export default {
         //let newshapetext ='{"element":"g","attr":{"id":"svg_4","fill-opacity":"1","stroke-opacity":"1"},"children":[{"element":"ellipse","attr":{"fill":"#000000","stroke":"#000000","stroke-width":"null","stroke-dasharray":"null","stroke-linejoin":"null","stroke-linecap":"null","fill-opacity":"0","style":"pointer-events:inherit","cx":"101","cy":"155","rx":"53","ry":"45","id":"svg_1","stroke-opacity":"1"},"children":[]},{"element":"ellipse","attr":{"fill":"#000000","stroke":"#000000","stroke-width":"null","stroke-dasharray":"null","stroke-linejoin":"null","stroke-linecap":"null","fill-opacity":"0","cx":"234","cy":"174","rx":"103","ry":"99","id":"svg_3","stroke-opacity":"1"},"children":[]}]}';
         // const newShape = JSON.parse(newshapetext);
 
-        const shape = new DOMParser().parseFromString(currentD[0],"image/svg+xml");
+        const shape = new DOMParser().parseFromString(currentD,"image/svg+xml");
         const newShape = convertDomToJson(shape.documentElement);
         // curShape = canv.addSVGElementFromJson({
         //   element: 'path',
