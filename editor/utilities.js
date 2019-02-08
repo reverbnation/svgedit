@@ -1233,7 +1233,9 @@ export const assignAttributes = function (elem, attrs, suspendLength, unitCheck)
     if (ns) {
       elem.setAttributeNS(ns, key, value);
     } else if (!unitCheck) {
-      elem.setAttribute(key, value);
+      if( key != '') {
+        elem.setAttribute(key, value);
+      }
     } else {
       setUnitAttr(elem, key, value);
     }
