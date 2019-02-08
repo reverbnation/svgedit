@@ -29,6 +29,8 @@ export default {
         data: {
           blue_triangle: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 38.43 38.43"><g><polygon points="19.22 0 0 33.28 38.43 33.28 19.22 0" style="fill:#364fc7"/></g></svg></svg>',
           red_circle: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 31.95 31.95"><circle cx="15.98" cy="15.98" r="15.98" style="fill:#eb244c"/></svg></svg>',
+          fb_goal: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 98.47 23.45"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect x="1" y="1" width="96.47" height="21.45" transform="translate(98.47 23.45) rotate(180)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"/><polyline points="67.79 22.45 67.79 13.88 60.37 9.6 52.95 13.88 52.95 22.45" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="45.53 1 45.53 9.57 52.95 13.85 60.37 9.57 60.37 1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="82.63 22.45 82.63 13.88 75.21 9.6 67.79 13.88" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><line x1="75.21" y1="9.57" x2="75.21" y2="1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"/><polyline points="97.47 13.88 90.05 9.6 82.63 13.88" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><line x1="90.05" y1="9.57" x2="90.05" y2="1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"/><polyline points="52.95 22.45 52.95 13.88 45.53 9.6 38.1 13.88 38.1 22.45" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="30.68 1 30.68 9.57 38.1 13.85 45.53 9.57 45.53 1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="15.84 1 15.84 9.57 23.26 13.85 30.68 9.57 30.68 1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="23.26 22.45 23.26 13.88 15.84 9.6 8.42 13.88 8.42 22.45" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="1 9.57 8.42 13.85 15.84 9.57 15.84 1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/></g></g></svg></svg>',
+          ball: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 16 16"><g id="svg_6"><path d="m8,16l0,-8l-8,0a8,8 0 0 0 8,8z" style="fill:#000;stroke:#000;stroke-width:2px;" id="svg_2"/><path d="m8,0l0,8l8,0a8,8 0 0 0 -8,-8z" style="fill:#000;stroke:#000;stroke-width:2px;" id="svg_3"/><path d="m0,8a8,8 0 1 0 16,0"  style="fill:none;stroke:#000;stroke-width:2px;" id="svg_1"/><path d="m16,8a8,8 0 1 0 -16,0"  style="fill:none;stroke:#000;stroke-width:2px;" id="svg_4"/></g></svg></svg>',
           square: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 300 300"><path fill="none" stroke="#000" stroke-width="3" d="m0,0l300,0l0,300l-300,0z"/></svg></svg>',
           diamond: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,150l149,-149l149,149l-149,149l-149,-149z"/></svg></svg>',
           pentagon: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1.00035,116.97758l148.99963,-108.4053l148.99998,108.4053l-56.91267,175.4042l-184.1741,0l-56.91284,-175.4042z"/></svg></svg>',
@@ -39,6 +41,7 @@ export default {
           uml_actor: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m40.5,100l219,0m-108.99991,94.00006l107,105m-107.00009,-106.00006l-100,106m99.5,-231l0,125m33.24219,-158.75781c0,18.35916 -14.88303,33.24219 -33.24219,33.24219c-18.35916,0 -33.2422,-14.88303 -33.2422,-33.24219c0.00002,-18.35915 14.88304,-33.24219 33.2422,-33.24219c18.35916,0 33.24219,14.88304 33.24219,33.24219z"/></svg></svg>',
           cross: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m0.99844,99.71339l98.71494,0l0,-98.71495l101.26279,0l0,98.71495l98.71495,0l0,101.2628l-98.71495,0l0,98.71494l-101.26279,0l0,-98.71494l-98.71494,0z"/></svg></svg>'
         },
+        scale: 30,
         buttons: []
       }
     };
@@ -70,7 +73,7 @@ export default {
     * @returns {undefined}
     */
     function makeButtons (cat, shapes) {
-      console.log("Make buttons for " + cat + " out of " + shapes);
+      // console.log("Make buttons for " + cat + " out of " + shapes);
       const shapeIcon = new DOMParser().parseFromString(
         '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"></svg>',"image/svg+xml"
       );
@@ -133,11 +136,11 @@ export default {
       const lib = library[catId];
 
       if (!lib) {
-        console.log("load library for " + catId + " from " + svgEditor.curConfig.extIconsPath + 'svgshapelib/' + catId + '.json');
+        // console.log("load library for " + catId + " from " + svgEditor.curConfig.extIconsPath + 'svgshapelib/' + catId + '.json');
 
         $('#svgshape_buttons').html(strings.loading);
         $.getJSON(svgEditor.curConfig.extIconsPath + 'svgshapelib/' + catId + '.json', function (result) {
-          console.log("library loaded " + result.data);
+          // console.log("library loaded " + result.data);
           curLib = library[catId] = {
             data: result.data,
             size: result.size,
@@ -145,14 +148,6 @@ export default {
           };
           makeButtons(catId, result);
           loadIcons();
-        }).done(function() {
-          console.log( "second success" );
-        })
-        .fail(function() {
-          console.log( "error" );
-        })
-        .always(function() {
-          console.log( "complete" );
         });
         return;
       }
@@ -245,7 +240,7 @@ export default {
           const catlink = $(this);
           catlink.siblings().removeClass('current');
           catlink.addClass('current');
-          console.log("mouse up on "+ catlink.attr('data-cat'));
+          // console.log("mouse up on "+ catlink.attr('data-cat'));
 
           loadLibrary(catlink.attr('data-cat'));
           // Get stuff
@@ -257,7 +252,7 @@ export default {
         $('#tools_svgshapelib').append(shapeCats);
 
         shower.mouseup(function () {
-          console.log("shower mouse up " + currentD + ":" + modeId);
+          // console.log("shower mouse up " + currentD + ":" + modeId);
           canv.setMode(currentD ? modeId : 'select');
         });
         $('#tool_svgshapelib').remove();
@@ -326,7 +321,9 @@ export default {
         lastBBox = getStrokedBBoxDefaultVisible([curShape]);
         // console.log("before scale "+lastBBox.x + " " +lastBBox.y + " " +lastBBox.width + " " +lastBBox.height);
     
-        let sx = (20 / lastBBox.width) || 1;
+        let sx = (curLib.scale / lastBBox.width) || 1;
+        let sy = (curLib.scale / lastBBox.height) || 1;
+        sx = (sx+ sy) / 2;
         // console.log('scale ' + sx);
         curShape.setAttribute('transform', 'translate(' + 0 + ',' + 0 + ') scale(' + sx + ') translate(' + -(lastBBox.x) + ',' + -(lastBBox.y) + ')');
         canv.recalculateDimensions(curShape);
@@ -345,7 +342,7 @@ export default {
         };
       },
       mouseMove (opts) {
-        console.log("mouseMove");
+        // console.log("mouseMove");
         const mode = canv.getMode();
         if (mode !== modeId) { return; }
 
@@ -364,8 +361,8 @@ export default {
         const newbox = {
           x: Math.min(startX, x),
           y: Math.min(startY, y),
-          width: Math.max(20,Math.abs(x - startX)),
-          height: Math.max(20,Math.abs(y - startY))
+          width: Math.max(curLib.scale,Math.abs(x - startX)),
+          height: Math.max(curLib.scale,Math.abs(y - startY))
         };
         // console.log(newbox.x + " " +newbox.y + " " +newbox.width + " " +newbox.height);
 
