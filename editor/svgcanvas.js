@@ -1977,7 +1977,7 @@ const mouseDown = function (evt) {
     break;
   case 'line': {
     started = true;
-    const strokeW = Number(curShape.stroke_width) === 0 ? 1 : curShape.stroke_width;
+    const strokeW = Number(curShape.stroke_width) < 3 ? 3 : curShape.stroke_width;
     addSVGElementFromJson({
       element: 'line',
       curStyles: true,
