@@ -900,7 +900,7 @@ span.zoom_tool {
 }
 
 .expanded #tool_stroke.color_tool {
-  width: 280px;
+  width: 150px;
 }
 
 .expanded #toggle_stroke_tools:before {

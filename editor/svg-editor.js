@@ -234,12 +234,16 @@ const callbacks = [],
       opacity: 0
     },
     initStroke: {
-      width: 1,
+      width: 3,
       color: '000000', // solid black
       opacity: 1
     },
     text: {
-      stroke_width: 0,
+      stroke_opacity: 1,
+      stroke_width: 1,
+      opacity: 1,
+      fill_color: '000000',
+      fill_opacity: 1,
       font_size: 24,
       font_family: 'serif'
     },
@@ -273,7 +277,7 @@ const callbacks = [],
     preventAllURLConfig: false,
     preventURLContentLoading: false,
     // EXTENSION CONFIGURATION (see also preventAllURLConfig)
-    lockExtensions: false, // Disallowed in URL setting
+    lockExtensions: true, // Disallowed in URL setting
     noDefaultExtensions: false, // noDefaultExtensions can only be meaningfully used in `svgedit-config-iife.js` or in the URL
     // EXTENSION-RELATED (GRID)
     showGrid: false, // Set by ext-grid.js
@@ -2452,9 +2456,12 @@ editor.init = function () {
           $('#container_panel').show();
           const title = svgCanvas.getTitle();
           const label = $('#g_title')[0];
-          label.value = title;
-          setInputWidth(label);
-          $('#g_title').prop('disabled', tagName === 'use');
+          if(typeof(label) != 'undefined') {
+            console.log(label);
+            label.value = title;
+            setInputWidth(label);
+            $('#g_title').prop('disabled', tagName === 'use');  
+          }
         }
       }
       menuItems[(tagName === 'g' ? 'en' : 'dis') + 'ableContextMenuItems']('#ungroup');
@@ -3770,6 +3777,7 @@ editor.init = function () {
   $('#toggle_stroke_tools').on('click', function () {
     $('#tools_bottom').toggleClass('expanded');
   });
+  $('#tools_bottom').toggleClass('expanded');
 
   (function () {
     const wArea = workarea[0];
@@ -5536,20 +5544,20 @@ editor.init = function () {
         parent: '#tools_line', prepend: true},
       {sel: '#tool_rect', fn: clickRect, evt: 'mouseup',
         key: ['R', true], parent: '#tools_rect', icon: 'rect'},
-      {sel: '#tool_square', fn: clickSquare, evt: 'mouseup',
-        parent: '#tools_rect', icon: 'square'},
-      {sel: '#tool_fhrect', fn: clickFHRect, evt: 'mouseup',
-        parent: '#tools_rect', icon: 'fh_rect'},
+      // {sel: '#tool_square', fn: clickSquare, evt: 'mouseup',
+      //   parent: '#tools_rect', icon: 'square'},
+      // {sel: '#tool_fhrect', fn: clickFHRect, evt: 'mouseup',
+      //   parent: '#tools_rect', icon: 'fh_rect'},
       {sel: '#tool_ellipse', fn: clickEllipse, evt: 'mouseup',
         key: ['E', true], parent: '#tools_ellipse', icon: 'ellipse'},
-      {sel: '#tool_circle', fn: clickCircle, evt: 'mouseup',
-        parent: '#tools_ellipse', icon: 'circle'},
-      {sel: '#tool_fhellipse', fn: clickFHEllipse, evt: 'mouseup',
-        parent: '#tools_ellipse', icon: 'fh_ellipse'},
-      {sel: '#tool_path', fn: clickPath, evt: 'click', key: ['P', true]},
+      // {sel: '#tool_circle', fn: clickCircle, evt: 'mouseup',
+      //   parent: '#tools_ellipse', icon: 'circle'},
+      // {sel: '#tool_fhellipse', fn: clickFHEllipse, evt: 'mouseup',
+      //   parent: '#tools_ellipse', icon: 'fh_ellipse'},
+      // {sel: '#tool_path', fn: clickPath, evt: 'click', key: ['P', true]},
       {sel: '#tool_text', fn: clickText, evt: 'click', key: ['T', true]},
-      {sel: '#tool_image', fn: clickImage, evt: 'mouseup'},
-      {sel: '#tool_zoom', fn: clickZoom, evt: 'mouseup', key: ['Z', true]},
+      // {sel: '#tool_image', fn: clickImage, evt: 'mouseup'},
+      // {sel: '#tool_zoom', fn: clickZoom, evt: 'mouseup', key: ['Z', true]},
       {sel: '#tool_clear', fn: clickClear, evt: 'mouseup', key: ['N', true]},
       {sel: '#tool_save', fn () {
         if (editingsource) {
@@ -5562,7 +5570,7 @@ editor.init = function () {
       {sel: '#tool_open', fn: clickOpen, evt: 'mouseup', key: ['O', true]},
       {sel: '#tool_import', fn: clickImport, evt: 'mouseup'},
       {sel: '#tool_source', fn: showSourceEditor, evt: 'click', key: ['U', true]},
-      {sel: '#tool_wireframe', fn: clickWireframe, evt: 'click', key: ['F', true]},
+      // {sel: '#tool_wireframe', fn: clickWireframe, evt: 'click', key: ['F', true]},
       {
         key: ['esc', false, false],
         fn () {
@@ -6402,9 +6410,9 @@ editor.loadFromURL = function (url, {cache, noAlert} = {}) {
         url,
         dataType: 'text',
         cache: Boolean(cache),
-        beforeSend () {
-          $.process_cancel(uiStrings.notification.loadingImage);
-        },
+        // beforeSend () {
+        //   $.process_cancel(uiStrings.notification.loadingImage);
+        // },
         success (str) {
           resolve(loadSvgString(str, {noAlert}));
         },
