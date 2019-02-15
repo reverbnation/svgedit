@@ -9,7 +9,8 @@ export default {
   },
   buttons: [
     {
-      title: 'SVG Shape library'
+      title: 'Shape library',
+      key: 'T' //Seems like this would work based on eyedroper ext but no
     }
   ]
 };
