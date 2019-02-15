@@ -10,9 +10,7 @@ export default {
         none: 'No arrow',
         end: '----&gt;',
         start: '&lt;----',
-        both: '&lt;---&gt;',
-        mid: '--&gt;--',
-        mid_bk: '--&lt;--'
+        both: '&lt;---&gt;'
       }
     }
   ]

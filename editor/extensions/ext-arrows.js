@@ -9,6 +9,18 @@
 export default {
   name: 'arrows',
   async init (S) {
+
+    const contextTools = [
+      {
+        type: 'select',
+        panel: 'arrow_panel',
+        id: 'arrow_list',
+        defval: 'end',
+        events: {
+          change: setArrow
+        }
+      }
+    ];  
     const strings = await S.importLocale();
     const svgEditor = this;
     const svgCanvas = svgEditor.canvas;
@@ -56,6 +68,9 @@ export default {
       bk: {d: 'm10,0l-10,5l10,5l-5,-5l5,-5z', refx: 2, id: arrowprefix + 'bk'}
     };
 
+    $('#arrow_list').val(contextTools[0].defval);
+    addMarker("fw", contextTools[0].defval);
+
     /**
      * Gets linked element.
      * @param {Element} elem
@@ -77,32 +92,19 @@ export default {
     * @returns {undefined}
     */
     function showPanel (on) {
+      let was_on=$('#arrow_panel').is(":visible");
+      let val = contextTools[0].defval;
       $('#arrow_panel').toggle(on);
-      if (on) {
-        const el = selElems[0];
-        const end = el.getAttribute('marker-end');
-        const start = el.getAttribute('marker-start');
-        const mid = el.getAttribute('marker-mid');
-        let val;
-        if (end && start) {
-          val = 'both';
-        } else if (end) {
-          val = 'end';
-        } else if (start) {
-          val = 'start';
-        } else if (mid) {
-          val = 'mid';
-          if (mid.includes('bk')) {
-            val = 'mid_bk';
-          }
-        }
-
-        if (!start && !mid && !end) {
-          val = 'none';
-        }
-
-        $('#arrow_list').val(val);
+      if (on && was_on) {
+        // const el = selElems[0];
+        // const end = el.getAttribute('marker-end');
+        // const start = el.getAttribute('marker-start');
+        // const mid = el.getAttribute('marker-mid');
+        val = $('#arrow_list :selected').val();
       }
+      $('#arrow_list').val(val);
+      setArrowWithVal(val);
+
     }
 
     /**
@@ -115,7 +117,6 @@ export default {
       el.removeAttribute('marker-mid');
       el.removeAttribute('marker-end');
     }
-
     /**
     * @param {"bk"|"fw"} dir
     * @param {"both"|"mid"|"end"|"start"} type
@@ -168,9 +169,11 @@ export default {
     * @returns {undefined}
     */
     function setArrow () {
+      return setArrowWithVal(this.value);
+    }
+    function setArrowWithVal (type) {
       resetMarker();
 
-      let type = this.value;
       if (type === 'none') {
         return;
       }
@@ -255,18 +258,6 @@ export default {
         }
       });
     }
-
-    const contextTools = [
-      {
-        type: 'select',
-        panel: 'arrow_panel',
-        id: 'arrow_list',
-        defval: 'none',
-        events: {
-          change: setArrow
-        }
-      }
-    ];
 
     return {
       name: strings.name,
