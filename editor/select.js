@@ -448,7 +448,8 @@ export class SelectorManager {
     if (isNullish(elem)) { return; }
     const N = this.selectors.length,
       sel = this.selectorMap[elem.id];
-    if (!sel.locked) {
+    console.log("elem.id="+elem.id+" and selectors[0]="+ this.selectors[0] + " and map="+ this.selectorMap.values);
+    if ((typeof(sel) != 'undefined') && (!sel.locked)) {
       // TODO(codedread): Ensure this exists in this module.
       console.log('WARNING! selector was released but was already unlocked'); // eslint-disable-line no-console
     }
