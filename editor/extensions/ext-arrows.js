@@ -91,20 +91,18 @@ export default {
     * @param {boolean} on
     * @returns {undefined}
     */
-    function showPanel (on) {
+    function arrowShowPanel (on) {
+      console.log('arrow show panel ' + on);
       let was_on=$('#arrow_panel').is(":visible");
       let val = contextTools[0].defval;
       $('#arrow_panel').toggle(on);
-      if (on && was_on) {
-        // const el = selElems[0];
-        // const end = el.getAttribute('marker-end');
-        // const start = el.getAttribute('marker-start');
-        // const mid = el.getAttribute('marker-mid');
-        val = $('#arrow_list :selected').val();
+      if (on) {
+        if (was_on) {
+          val = $('#arrow_list :selected').val();
+        }
+        $('#arrow_list').val(val);
+        setArrowWithVal(val);
       }
-      $('#arrow_list').val(val);
-      setArrowWithVal(val);
-
     }
 
     /**
@@ -239,7 +237,7 @@ export default {
 
         // Check if last marker can be removed
         let remove = true;
-        $(S.svgcontent).find('line, polyline, path, polygon').each(function () {
+        $(S.svgcontent).find('line, polyline, path').each(function () {
           const element = this; // eslint-disable-line consistent-this
           $.each(mtypes, function (j, mtype) {
             if ($(element).attr('marker-' + mtype) === 'url(#' + marker.id + ')') {
@@ -278,20 +276,16 @@ export default {
       selectedChanged (opts) {
         // Use this to update the current selected elements
         selElems = opts.elems;
-
-        const markerElems = ['line', 'path', 'polyline', 'polygon'];
-        let i = selElems.length;
-        while (i--) {
-          const elem = selElems[i];
-          if (elem && markerElems.includes(elem.tagName)) {
-            if (opts.selectedElement && !opts.multiselected) {
-              showPanel(true);
-            } else {
-              showPanel(false);
-            }
+        console.log('arrow selectedChanged');
+        const markerElems = ['line', 'path', 'polyline'];
+        if (selElems.length == 1) {
+          if (selElems[0] && markerElems.includes(selElems[0].tagName)) {
+            arrowShowPanel(true);
           } else {
-            showPanel(false);
+            arrowShowPanel(false);
           }
+        } else {
+          arrowShowPanel(false);
         }
       },
       elementChanged (opts) {
