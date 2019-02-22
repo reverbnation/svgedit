@@ -681,6 +681,7 @@ const addToSelection = this.addToSelection = function (elemsToAdd, showGrips) {
       // only the first selectedBBoxes element is ever used in the codebase these days
       // if (j === 0) selectedBBoxes[0] = utilsGetBBox(elem);
       j++;
+
       const sel = selectorManager.requestSelector(elem, bbox);
 
       if (selectedElements.length > 1) {
@@ -761,9 +762,12 @@ const getMouseTarget = this.getMouseTarget = function (evt) {
     // this makes it easier to indentify as being a selector grip
     return selectorManager.selectorParentGroup;
   }
-
+  
   while (mouseTarget.parentNode !== (currentGroup || currentLayer)) {
     mouseTarget = mouseTarget.parentNode;
+    if (mouseTarget.tagName == 'svg') {
+      return svgroot;
+    }
   }
 
   //
@@ -1474,6 +1478,7 @@ const ffClone = function (elem) {
   elem.remove();
   selectorManager.releaseSelector(elem);
   selectedElements[0] = clone;
+
   selectorManager.requestSelector(clone).showGrips(true);
   return clone;
 };
@@ -1536,6 +1541,7 @@ this.setRotationAngle = function (val, preventUndo) {
   // if (elem.nodeName === 'path' && pointGripContainer) {
   //   pathActions.setPointContainerTransform(elem.getAttribute('transform'));
   // }
+
   const selector = selectorManager.requestSelector(selectedElements[0]);
   selector.resize();
   Selector.updateGripCursors(val);
@@ -3384,6 +3390,7 @@ return /** @lends module:svgcanvas.SvgCanvas#textActions */ {
   */
   toEditMode (x, y) {
     allowDbl = false;
+
     currentMode = 'textedit';
     selectorManager.requestSelector(curtext).showGrips(false);
     // Make selector group accept clicks
