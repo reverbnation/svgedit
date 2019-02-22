@@ -335,7 +335,7 @@ export const putLocale = async function (givenParam, goodLangs, conf) {
       }
     }
 
-    console.log('Lang: ' + langParam); // eslint-disable-line no-console
+    // console.log('Lang: ' + langParam); // eslint-disable-line no-console
 
     // Set to English if language is not in list of good langs
     if (!goodLangs.includes(langParam) && langParam !== 'test') {
