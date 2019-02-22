@@ -27,21 +27,21 @@ export default {
     const library = {
       basic: {
         data: {
-          blue_triangle: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 38.43 38.43"><g><polygon points="19.22 0 0 33.28 38.43 33.28 19.22 0" style="fill:#364fc7"/></g></svg></svg>',
-          red_circle: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 31.95 31.95"><circle cx="15.98" cy="15.98" r="15.98" style="fill:#eb244c"/></svg></svg>',
-          fb_goal: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 98.47 23.45"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect x="1" y="1" width="96.47" height="21.45" transform="translate(98.47 23.45) rotate(180)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"/><polyline points="67.79 22.45 67.79 13.88 60.37 9.6 52.95 13.88 52.95 22.45" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="45.53 1 45.53 9.57 52.95 13.85 60.37 9.57 60.37 1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="82.63 22.45 82.63 13.88 75.21 9.6 67.79 13.88" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><line x1="75.21" y1="9.57" x2="75.21" y2="1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"/><polyline points="97.47 13.88 90.05 9.6 82.63 13.88" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><line x1="90.05" y1="9.57" x2="90.05" y2="1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"/><polyline points="52.95 22.45 52.95 13.88 45.53 9.6 38.1 13.88 38.1 22.45" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="30.68 1 30.68 9.57 38.1 13.85 45.53 9.57 45.53 1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="15.84 1 15.84 9.57 23.26 13.85 30.68 9.57 30.68 1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="23.26 22.45 23.26 13.88 15.84 9.6 8.42 13.88 8.42 22.45" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/><polyline points="1 9.57 8.42 13.85 15.84 9.57 15.84 1" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;fill-rule:evenodd"/></g></g></svg></svg>',
-          ball: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 16 16"><g id="svg_6"><path d="m8,16l0,-8l-8,0a8,8 0 0 0 8,8z" style="fill:#000;stroke:#000;stroke-width:2px;" id="svg_2"/><path d="m8,0l0,8l8,0a8,8 0 0 0 -8,-8z" style="fill:#000;stroke:#000;stroke-width:2px;" id="svg_3"/><path d="m0,8a8,8 0 1 0 16,0"  style="fill:none;stroke:#000;stroke-width:2px;" id="svg_1"/><path d="m16,8a8,8 0 1 0 -16,0"  style="fill:none;stroke:#000;stroke-width:2px;" id="svg_4"/></g></svg></svg>',
+          blue_triangle: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 33 33"><g><polygon points="16.165,0 0,28 32.32,28 16.165,0 " style="fill:#364fc7"/></g></svg></svg>',
+          red_circle: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 30 30"><circle cx="15" cy="15" r="15" style="fill:#eb244c" stroke-width="0"/></svg></svg>',
+          fb_goal: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 98.47 23.45"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect fill="none" height="18.335" stroke="#000" stroke-miterlimit="10" stroke-width="2px" width="82.46" x="0" y="0"/><polyline fill="none" fill-rule="evenodd" points="57.09,18.335 57.09,11 50.75,7.35 44.4,11 44.4,18.335 " stroke="#000" stroke-miterlimit="10" stroke-width="2px"/><polyline fill="none" fill-rule="evenodd" points="38.06,0 38.06,7.33 44.4,11 50.75,7.33 50.75,0 " stroke="#000" stroke-miterlimit="10" stroke-width="2px"/><polyline fill="none" fill-rule="evenodd" points="69.78,18.335 69.78,11 63.434,7.35 57.09,11 " stroke="#000" stroke-miterlimit="10" stroke-width="2px"/><line fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2px" x1="63.43" x2="63.43" y1="7.33" y2="0"/><polyline fill="none" fill-rule="evenodd" points="82.46,11 76.12,7.35 69.78,11 " stroke="#000" stroke-miterlimit="10" stroke-width="2px"/><line fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2px" x1="76.119" x2="76.119" y1="7.33" y2="0"/><polyline fill="none" fill-rule="evenodd" points="44.4,18.335 44.4,11 38.06,7.35 31.71,11 31.71,18.335 " stroke="#000" stroke-miterlimit="10" stroke-width="2px"/><polyline fill="none" fill-rule="evenodd" points="25.37,0 25.37,7.33 31.71,11 38.06,7.33 38.06,0 " stroke="#000" stroke-miterlimit="10" stroke-width="2px"/><polyline fill="none" fill-rule="evenodd" points="12.685,0 12.685,7.33 19.03,11 25.37,7.33 25.37,0 " stroke="#000" stroke-miterlimit="10" stroke-width="2px"/><polyline fill="none" fill-rule="evenodd" points="19.03,18.335 19.03,11 12.685,7.35 6.34,11 6.34,18.335 " stroke="#000" stroke-miterlimit="10" stroke-width="2px"/><polyline fill="none" fill-rule="evenodd" points="0,7.33 6.34,11 12.685,7.33 12.685,0 " stroke="#000" stroke-miterlimit="10" stroke-width="2px"/></g></g></svg></svg>',
+          ball: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-4 -4 24 24"><g id="svg_6"><path d="m8,16l0,-8l-8,0a8,8 0 0 0 8,8z" style="fill:#000;stroke:#000;stroke-width:2px;" id="svg_2"/><path d="m8,0l0,8l8,0a8,8 0 0 0 -8,-8z" style="fill:#000;stroke:#000;stroke-width:2px;" id="svg_3"/><path d="m0,8a8,8 0 1 0 16,0"  style="fill:none;stroke:#000;stroke-width:2px;" id="svg_1"/><path d="m16,8a8,8 0 1 0 -16,0"  style="fill:none;stroke:#000;stroke-width:2px;" id="svg_4"/></g></svg></svg>',
           square: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 300 300"><path fill="none" stroke="#000" stroke-width="3" d="m0,0l300,0l0,300l-300,0z"/></svg></svg>',
           diamond: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,150l149,-149l149,149l-149,149l-149,-149z"/></svg></svg>',
           pentagon: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1.00035,116.97758l148.99963,-108.4053l148.99998,108.4053l-56.91267,175.4042l-184.1741,0l-56.91284,-175.4042z"/></svg></svg>',
           hexagon: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,149.99944l63.85715,-127.71428l170.28572,0l63.85713,127.71428l-63.85713,127.71428l-170.28572,0l-63.85715,-127.71428z"/></svg></svg>',
           star_points_5: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,116.58409l113.82668,0l35.17332,-108.13487l35.17334,108.13487l113.82666,0l-92.08755,66.83026l35.17514,108.13487l-92.08759,-66.83208l-92.08757,66.83208l35.17515,-108.13487l-92.08758,-66.83026z"/></svg></svg>',
           arrow_up: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1.49805,149.64304l148.50121,-148.00241l148.50121,148.00241l-74.25061,0l0,148.71457l-148.5012,0l0,-148.71457z"/></svg></svg>',
-          man: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m125.90131,25.2503c0,-13.33112 10.79823,-24.12934 24.12934,-24.12934c13.33113,0 24.12932,10.79822 24.12932,24.12934c0,13.33112 -10.79819,24.12934 -24.12932,24.12934c-13.33113,0 -24.12934,-10.79822 -24.12934,-24.12934zm81.12696,68.30144l0,-12.18601c0,-12.82147 -10.38806,-23.21696 -23.21696,-23.21696l-67.63607,0c-12.82147,0 -23.21695,10.39549 -23.21695,23.21696l0,12.18601c-0.02242,0.2766 -0.03739,0.56071 -0.03739,0.84853l0,70.18918c0,5.4538 4.41839,9.87215 9.87218,9.87215c5.44633,0 9.87589,-4.41837 9.87589,-9.87215l0,-69.14999l6.62006,0l0,79.02961l0.04859,0l0,111.66646c0,7.25925 5.89491,13.15787 13.16164,13.15787c7.27048,0 13.16164,-5.89114 13.16164,-13.15787l0,-111.66646l8.68347,0l0,111.66646c0,7.25925 5.89856,13.15787 13.16162,13.15787c7.27045,0 13.16161,-5.89114 13.16161,-13.15787l0,-111.66646l0.04112,0l0,-79.02961l6.62007,0l0,69.14623c0,5.45381 4.42955,9.8759 9.8759,9.8759c5.45386,0 9.87218,-4.42209 9.87218,-9.8759l0,-70.18916c-0.00371,-0.29156 -0.02617,-0.56819 -0.0486,-0.8448z" style="fill:#eee"/></svg></svg>',
-          uml_actor: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m40.5,100l219,0m-108.99991,94.00006l107,105m-107.00009,-106.00006l-100,106m99.5,-231l0,125m33.24219,-158.75781c0,18.35916 -14.88303,33.24219 -33.24219,33.24219c-18.35916,0 -33.2422,-14.88303 -33.2422,-33.24219c0.00002,-18.35915 14.88304,-33.24219 33.2422,-33.24219c18.35916,0 33.24219,14.88304 33.24219,33.24219z"/></svg></svg>',
+          coach: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 20 50"><g><path d="m5.74539,4.33766c0,-2.12026 1.71741,-3.83766 3.83766,-3.83766c2.12026,0 3.83766,1.71741 3.83766,3.83766c0,2.12026 -1.7174,3.83766 -3.83766,3.83766c-2.12026,0 -3.83766,-1.71741 -3.83766,-3.83766zm12.90288,10.86304l0,-1.93813c0,-2.0392 -1.65217,-3.69255 -3.69255,-3.69255l-10.75722,0c-2.0392,0 -3.69255,1.65336 -3.69255,3.69255l0,1.93813c-0.00357,0.04399 -0.00595,0.08918 -0.00595,0.13495l0,11.16328c0,0.8674 0.70273,1.57012 1.57013,1.57012c0.86621,0 1.57072,-0.70272 1.57072,-1.57012l0,-10.998l1.05289,0l0,12.56931l0.00773,0l0,17.76005c0,1.15455 0.93756,2.0927 2.0933,2.0927c1.15634,0 2.0933,-0.93696 2.0933,-2.0927l0,-17.76005l1.38107,0l0,17.76005c0,1.15455 0.93814,2.0927 2.0933,2.0927c1.15633,0 2.0933,-0.93696 2.0933,-2.0927l0,-17.76005l0.00654,0l0,-12.56931l1.05289,0l0,10.9974c0,0.8674 0.7045,1.57072 1.57072,1.57072c0.86741,0 1.57013,-0.70331 1.57013,-1.57072l0,-11.16327c-0.00059,-0.04637 -0.00416,-0.09037 -0.00773,-0.13436z" fill="#eee" marker-end="none" stroke="#000" stroke-width="2"/></g></svg></svg>',
+          uml_actor: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" marker-end="none" d="m40.5,100l219,0m-108.99991,94.00006l107,105m-107.00009,-106.00006l-100,106m99.5,-231l0,125m33.24219,-158.75781c0,18.35916 -14.88303,33.24219 -33.24219,33.24219c-18.35916,0 -33.2422,-14.88303 -33.2422,-33.24219c0.00002,-18.35915 14.88304,-33.24219 33.2422,-33.24219c18.35916,0 33.24219,14.88304 33.24219,33.24219z"/></svg></svg>',
           cross: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m0.99844,99.71339l98.71494,0l0,-98.71495l101.26279,0l0,98.71495l98.71495,0l0,101.2628l-98.71495,0l0,98.71494l-101.26279,0l0,-98.71494l-98.71494,0z"/></svg></svg>'
         },
-        scale: 30,
+        scale: 0,
         buttons: []
       }
     };
@@ -123,6 +123,10 @@ export default {
           let child = dom.children[i]; 
           children.push(convertDomToJson(child));
         }
+        if ((dom.tagName == 'text') && (dom.textContent.length > 0)) {
+          console.log("node " + dom.tagName + " has text content " + dom.textContent);
+          children.push(dom.textContent);
+        }
         result['children'] = children;
       }
       return result;
@@ -163,6 +167,7 @@ export default {
       events: {
         click () {
           canv.setMode(modeId);
+          //svgEditor.toolButtonClick('#tool_svgshapelib_show');
         }
       }
     }];
@@ -272,13 +277,15 @@ export default {
       mouseDown (opts) {
         const mode = canv.getMode();
         if (mode !== modeId) { return undefined; }
+        const zoom = canv.getZoom();
+        // console.log("Zoom is "+ zoom);
 
         // //these are relative to the canvas
-        startX = opts.start_x;
-        const x = startX + 10;
-        startY = opts.start_y;
-        const y = startY + 10;
-        // console.log("start at "+startX+","+startY);
+        // console.log("start at "+opts.start_x+","+opts.start_y);
+        startX = opts.start_x * zoom;
+        // const x = startX + 10;
+        startY = opts.start_y * zoom;
+        // const y = startY + 10;
         // console.log("currentD " + currentD);
         
         // let newshapetext = '{"element":"g","attr":{},"children":[{"element":"polygon","attr":{"points":"19.22 0 0 33.28 38.43 33.28 19.22 0","fill":"#364fc7"},"children":[]}]}';
@@ -320,12 +327,15 @@ export default {
           
         lastBBox = getStrokedBBoxDefaultVisible([curShape]);
         // console.log("before scale "+lastBBox.x + " " +lastBBox.y + " " +lastBBox.width + " " +lastBBox.height);
-    
-        let sx = (curLib.scale / lastBBox.width) || 1;
-        let sy = (curLib.scale / lastBBox.height) || 1;
-        sx = (sx+ sy) / 2;
-        // console.log('scale ' + sx);
-        curShape.setAttribute('transform', 'translate(' + 0 + ',' + 0 + ') scale(' + sx + ') translate(' + -(lastBBox.x) + ',' + -(lastBBox.y) + ')');
+        if (curLib.scale > 0) {
+          let sx = (curLib.scale / lastBBox.width) || 1;
+          let sy = (curLib.scale / lastBBox.height) || 1;
+          sx = (sx+ sy) / 2;  
+          // console.log('scale ' + sx);
+          curShape.setAttribute('transform', 'translate(' + 0 + ',' + 0 + ') scale(' + sx + ') translate(' + -(lastBBox.x) + ',' + -(lastBBox.y) + ')');
+        } else {
+          // curShape.setAttribute('translate(' + -(lastBBox.x) + ',' + -(lastBBox.y) + ')');
+        }
         canv.recalculateDimensions(curShape);
 
         // console.log("startX=" + startX + " lastBBox.x=" + lastBBox.x);
@@ -349,8 +359,8 @@ export default {
         const zoom = canv.getZoom();
         const evt = opts.event;
 
-        const x = opts.mouse_x / zoom;
-        const y = opts.mouse_y / zoom;
+        const x = opts.mouse_x;
+        const y = opts.mouse_y;
 
         const tlist = canv.getTransformList(curShape),
           box = curShape.getBBox(),
@@ -358,53 +368,55 @@ export default {
           // {width, height} = box,
         // const dx = (x - startX), dy = (y - startY);
 
-        const newbox = {
-          x: Math.min(startX, x),
-          y: Math.min(startY, y),
-          width: Math.max(curLib.scale,Math.abs(x - startX)),
-          height: Math.max(curLib.scale,Math.abs(y - startY))
-        };
-        // console.log(newbox.x + " " +newbox.y + " " +newbox.width + " " +newbox.height);
+        if (curLib.scale > 0) {
 
-        /*
-        // This is currently serving no purpose, so commenting out
-        let sy = height ? (height + dy) / height : 1,
-          sx = width ? (width + dx) / width : 1;
-        */
+          const newbox = {
+            x: Math.min(startX, x),
+            y: Math.min(startY, y),
+            width: Math.max(curLib.scale,Math.abs(x - startX)),
+            height: Math.max(curLib.scale,Math.abs(y - startY))
+          };
+          // console.log(newbox.x + " " +newbox.y + " " +newbox.width + " " +newbox.height);
 
-        let sx = (newbox.width / lastBBox.width) || 1;
-        let sy = (newbox.height / lastBBox.height) || 1;
-        // console.log(sx + ":" + sy);
+          /*
+          // This is currently serving no purpose, so commenting out
+          let sy = height ? (height + dy) / height : 1,
+            sx = width ? (width + dx) / width : 1;
+          */
 
-        // Not perfect, but mostly works...
-        let tx = 0;
-        if (x < startX) {
-          tx = lastBBox.width;
+          let sx = (newbox.width / lastBBox.width) || 1;
+          let sy = (newbox.height / lastBBox.height) || 1;
+          // console.log(sx + ":" + sy);
+          // Not perfect, but mostly works...
+          let tx = 0;
+          if (x < startX) {
+            tx = lastBBox.width;
+          }
+          let ty = 0;
+          if (y < startY) {
+            ty = lastBBox.height;
+          }
+
+          // update the transform list with translate,scale,translate
+          const translateOrigin = svgroot.createSVGTransform(),
+            scale = svgroot.createSVGTransform(),
+            translateBack = svgroot.createSVGTransform();
+
+          translateOrigin.setTranslate(-(left + tx), -(top + ty));
+          if (!evt.shiftKey) {
+            const max = Math.min(Math.abs(sx), Math.abs(sy));
+
+            sx = max * (sx < 0 ? -1 : 1);
+            sy = max * (sy < 0 ? -1 : 1);
+          }
+          scale.setScale(sx, sy);
+
+          translateBack.setTranslate(left + tx, top + ty);
+          tlist.appendItem(translateBack);
+          tlist.appendItem(scale);
+          tlist.appendItem(translateOrigin);
         }
-        let ty = 0;
-        if (y < startY) {
-          ty = lastBBox.height;
-        }
-
-        // update the transform list with translate,scale,translate
-        const translateOrigin = svgroot.createSVGTransform(),
-          scale = svgroot.createSVGTransform(),
-          translateBack = svgroot.createSVGTransform();
-
-        translateOrigin.setTranslate(-(left + tx), -(top + ty));
-        if (!evt.shiftKey) {
-          const max = Math.min(Math.abs(sx), Math.abs(sy));
-
-          sx = max * (sx < 0 ? -1 : 1);
-          sy = max * (sy < 0 ? -1 : 1);
-        }
-        scale.setScale(sx, sy);
-
-        translateBack.setTranslate(left + tx, top + ty);
-        tlist.appendItem(translateBack);
-        tlist.appendItem(scale);
-        tlist.appendItem(translateOrigin);
-
+        
         canv.recalculateDimensions(curShape);
 
         lastBBox = curShape.getBBox();
@@ -420,6 +432,9 @@ export default {
           element: curShape,
           started: false
         };
+      },
+      selectedChanged (opts) {
+        // console.log("svgshapes selectedChanged opts=" + JSON.stringify(opts));
       }
     };
   }
