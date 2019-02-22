@@ -150,7 +150,6 @@ const callbacks = [],
     // 'ext-panning.js',
     // 'ext-polygon.js',
     // 'ext-shapes.js',
-    'ext-svgshapes.js',
     // 'ext-star.js',
     // 'ext-closepath.js',
     // 'ext-php_savefile.js',
@@ -158,6 +157,9 @@ const callbacks = [],
     // 'ext-server_moinsave.js',
     // 'ext-server_opensave.js',
     'ext-arrows.js',
+    'ext-bluetriangle.js',
+    'ext-redcircle.js',
+    'ext-svgshapes.js',
     'ext-storage.js'
   ],
   /**
@@ -552,7 +554,7 @@ editor.setConfig = function (opts, cfgCfg) {
         } else if (cfgCfg.allowInitialUserOverride === true) {
           extendOrAdd(defaultConfig, key, val);
         } else if (defaultConfig[key] && typeof defaultConfig[key] === 'object') {
-          curConfig[key] = {};
+          curConfig[key] = Array.isArray(defaultConfig[key]) ? [] : {};
           $.extend(true, curConfig[key], val); // Merge properties recursively, e.g., on initFill, initStroke objects
         } else {
           curConfig[key] = val;
@@ -1805,6 +1807,7 @@ editor.init = function () {
   * @returns {boolean} Whether the button was disabled or not
   */
   const toolButtonClick = editor.toolButtonClick = function (button, noHiding) {
+    console.log(JSON.stringify(button));
     if ($(button).hasClass('disabled')) { return false; }
     if ($(button).parent().hasClass('tools_flyout')) { return true; }
     const fadeFlyouts = 'normal';
@@ -2152,34 +2155,35 @@ editor.init = function () {
   const updateToolButtonState = function () {
     const bNoFill = (svgCanvas.getColor('fill') === 'none');
     const bNoStroke = (svgCanvas.getColor('stroke') === 'none');
-    const buttonsNeedingStroke = ['#tool_fhpath', '#tool_line'];
-    const buttonsNeedingFillAndStroke = ['#tools_rect .tool_button', '#tools_ellipse .tool_button', '#tool_text', '#tool_path'];
+    // const buttonsNeedingStroke = ['#tool_fhpath', '#tool_line'];
+    // const buttonsNeedingFillAndStroke = ['#tools_rect .tool_button', '#tools_ellipse .tool_button', '#tool_text', '#tool_path'];
 
-    if (bNoStroke) {
-      buttonsNeedingStroke.forEach((btn) => {
-        if ($(btn).hasClass('tool_button_current')) {
-          clickSelect();
-        }
-        $(btn).addClass('disabled');
-      });
-    } else {
-      buttonsNeedingStroke.forEach((btn) => {
-        $(btn).removeClass('disabled');
-      });
-    }
+    // if (bNoStroke) {
+    //   buttonsNeedingStroke.forEach((btn) => {
+    //     console.log("buttons needing stroke");
+    //     if ($(btn).hasClass('tool_button_current')) {
+    //       clickSelect();
+    //     }
+    //     $(btn).addClass('disabled');
+    //   });
+    // } else {
+    //   buttonsNeedingStroke.forEach((btn) => {
+    //     $(btn).removeClass('disabled');
+    //   });
+    // }
 
-    if (bNoStroke && bNoFill) {
-      buttonsNeedingFillAndStroke.forEach((btn) => {
-        if ($(btn).hasClass('tool_button_current')) {
-          clickSelect();
-        }
-        $(btn).addClass('disabled');
-      });
-    } else {
-      buttonsNeedingFillAndStroke.forEach((btn) => {
-        $(btn).removeClass('disabled');
-      });
-    }
+    // if (bNoStroke && bNoFill) {
+    //   buttonsNeedingFillAndStroke.forEach((btn) => {
+    //     if ($(btn).hasClass('tool_button_current')) {
+    //       clickSelect();
+    //     }
+    //     $(btn).addClass('disabled');
+    //   });
+    // } else {
+    //   buttonsNeedingFillAndStroke.forEach((btn) => {
+    //     $(btn).removeClass('disabled');
+    //   });
+    // }
 
     svgCanvas.runExtensions('toolButtonStateUpdate', /** @type {module:svgcanvas.SvgCanvas#event:ext-toolButtonStateUpdate} */ {
       nofill: bNoFill,
@@ -2457,7 +2461,7 @@ editor.init = function () {
           const title = svgCanvas.getTitle();
           const label = $('#g_title')[0];
           if(typeof(label) != 'undefined') {
-            console.log(label);
+            // console.log(label);
             label.value = title;
             setInputWidth(label);
             $('#g_title').prop('disabled', tagName === 'use');  
@@ -3283,11 +3287,12 @@ editor.init = function () {
           .attr('title', btn.title)
           .addClass(cls);
         if (!btn.includeWith && !btn.list) {
+          console.log('Adding buttons for ' + btn.title + ' in list with ' + $(parent).children().size());
           if ('position' in btn) {
             if ($(parent).children().eq(btn.position).length) {
               $(parent).children().eq(btn.position).before(button);
             } else {
-              $(parent).children().last().before(button);
+              $(parent).children().last().after(button);
             }
           } else {
             button.appendTo(parent);
@@ -3538,17 +3543,17 @@ editor.init = function () {
   svgCanvas.bind('extension_added', extAdded);
   svgCanvas.textActions.setInputElem($('#text')[0]);
 
-  let str = '<div class="palette_item" data-rgb="none"></div>';
-  $.each(palette, function (i, item) {
-    str += '<div class="palette_item" style="background-color: ' + item +
-      ';" data-rgb="' + item + '"></div>';
-  });
-  $('#palette').append(str);
+  // let str = '<div class="palette_item" data-rgb="none"></div>';
+  // $.each(palette, function (i, item) {
+  //   str += '<div class="palette_item" style="background-color: ' + item +
+  //     ';" data-rgb="' + item + '"></div>';
+  // });
+  // $('#palette').append(str);
 
   // Set up editor background functionality
   // TODO add checkerboard as "pattern"
   const colorBlocks = ['#FFF', '#888', '#000']; // ,'url(data:image/gif;base64,R0lGODlhEAAQAIAAAP%2F%2F%2F9bW1iH5BAAAAAAALAAAAAAQABAAAAIfjG%2Bgq4jM3IFLJgpswNly%2FXkcBpIiVaInlLJr9FZWAQA7)'];
-  str = '';
+  let str = '';
   $.each(colorBlocks, function () {
     str += '<div class="color_block" style="background-color:' + this + ';"></div>';
   });
@@ -3745,34 +3750,34 @@ editor.init = function () {
   });
 
   // Prevent selection of elements when shift-clicking
-  $('#palette').mouseover(function () {
-    const inp = $('<input type="hidden">');
-    $(this).append(inp);
-    inp.focus().remove();
-  });
+  // $('#palette').mouseover(function () {
+  //   const inp = $('<input type="hidden">');
+  //   $(this).append(inp);
+  //   inp.focus().remove();
+  // });
 
-  $('.palette_item').mousedown(function (evt) {
-    // shift key or right click for stroke
-    const picker = evt.shiftKey || evt.button === 2 ? 'stroke' : 'fill';
-    let color = $(this).data('rgb');
-    let paint;
+  // $('.palette_item').mousedown(function (evt) {
+  //   // shift key or right click for stroke
+  //   const picker = evt.shiftKey || evt.button === 2 ? 'stroke' : 'fill';
+  //   let color = $(this).data('rgb');
+  //   let paint;
 
-    // Webkit-based browsers returned 'initial' here for no stroke
-    if (color === 'none' || color === 'transparent' || color === 'initial') {
-      color = 'none';
-      paint = new $.jGraduate.Paint();
-    } else {
-      paint = new $.jGraduate.Paint({alpha: 100, solidColor: color.substr(1)});
-    }
+  //   // Webkit-based browsers returned 'initial' here for no stroke
+  //   if (color === 'none' || color === 'transparent' || color === 'initial') {
+  //     color = 'none';
+  //     paint = new $.jGraduate.Paint();
+  //   } else {
+  //     paint = new $.jGraduate.Paint({alpha: 100, solidColor: color.substr(1)});
+  //   }
 
-    paintBox[picker].setPaint(paint);
-    svgCanvas.setColor(picker, color);
+  //   paintBox[picker].setPaint(paint);
+  //   svgCanvas.setColor(picker, color);
 
-    if (color !== 'none' && svgCanvas.getPaintOpacity(picker) !== 1) {
-      svgCanvas.setPaintOpacity(picker, 1.0);
-    }
-    updateToolButtonState();
-  }).bind('contextmenu', function (e) { e.preventDefault(); });
+  //   if (color !== 'none' && svgCanvas.getPaintOpacity(picker) !== 1) {
+  //     svgCanvas.setPaintOpacity(picker, 1.0);
+  //   }
+  //   updateToolButtonState();
+  // }).bind('contextmenu', function (e) { e.preventDefault(); });
 
   $('#toggle_stroke_tools').on('click', function () {
     $('#tools_bottom').toggleClass('expanded');
@@ -5569,7 +5574,7 @@ editor.init = function () {
       {sel: '#tool_export', fn: clickExport, evt: 'mouseup'},
       {sel: '#tool_open', fn: clickOpen, evt: 'mouseup', key: ['O', true]},
       {sel: '#tool_import', fn: clickImport, evt: 'mouseup'},
-      {sel: '#tool_source', fn: showSourceEditor, evt: 'click', key: ['U', true]},
+      {sel: '#tool_source', fn: showSourceEditor, evt: 'click', key: ['W', true]},
       // {sel: '#tool_wireframe', fn: clickWireframe, evt: 'click', key: ['F', true]},
       {
         key: ['esc', false, false],
