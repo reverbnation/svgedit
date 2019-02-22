@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script type="text/javascript" src="editor/jquery.min.js"></script>
+
+
+  </head>
+  <body onload="updateSource()">
+    <!-- <a id="close">save and close</a></br> -->
+    <dev id='svg_edit_container'>
+        <iframe id="svg_edit" width="850" height="740"></iframe>
+    </dev></br>
+    <!-- <a id="get_svg">get svg</a></br>
+    <textarea id="svg_content"></textarea> -->
+    <script>
+      function send_get_svg_message() {
+        var wn = $('#svg_edit')[0].contentWindow;
+        // postMessage arguments: data to send, target origin
+        wn.postMessage('get_svg', '/');
+        $('#svg_content').html('reading...');
+      }
+
+      $('#close').click(function() {
+        send_get_svg_message();
+        //$('#svg_edit')[0].contentWindow.location.href = 'blank.html';
+        // $('#svg_edit_container')[0].removeChild($('#svg_edit')[0])
+        $('#svg_edit_container')[0].hidden = true;
+      });
+
+      $('#get_svg').click(function() {
+        send_get_svg_message();
+      });
+
+      function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+      }
+      function getUrlParam(parameter, defaultvalue){
+        var urlparameter = defaultvalue;
+        if(window.location.href.indexOf(parameter) > -1){
+            urlparameter = getUrlVars()[parameter];
+            }
+        return urlparameter;
+      }
+      
+      function updateSource() {
+        let startingImage = getUrlParam("startingImage","field_in_layer_2.svg");
+        let url ="editor/svg-editor-es?dimensions=749,540&url=/editor/"+startingImage+ "&lang=en&storagePrompt=false";
+        document.getElementById('svg_edit').src=url; 
+      }
+        // message event handler (e is event object) 
+      window.handleMessage = function(e) {
+      // Check origin
+      // if ( e.origin === 'http://www.example.com' ) {
+          // Retrieve data sent in postMessage
+          console.log('Message received in parent ');
+          $('#svg_content').html(e.data);          
+      // }
+    }
+
+    if ( window.addEventListener ) {
+      window.addEventListener('message', handleMessage, false);
+    } else if ( window.attachEvent ) { // ie8
+      window.attachEvent('onmessage', handleMessage);
+    }
+    console.log()
+    </script>
+
+  </body>
+</html>
