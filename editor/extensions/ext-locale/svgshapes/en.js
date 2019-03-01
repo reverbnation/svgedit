@@ -2,7 +2,7 @@ export default {
   loading: 'Loading...',
   categories: {
     basic: 'Basic',
-    positions: 'Positions',
+    // positions: 'Positions',
     equipment: 'Equipment',
     arrow: 'Arrows',
     misc: 'Miscellaneous',

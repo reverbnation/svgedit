@@ -159,6 +159,7 @@ const callbacks = [],
     'ext-arrows.js',
     'ext-bluetriangle.js',
     'ext-redcircle.js',
+    'ext-soccerball.js',
     'ext-svgshapes.js',
     'ext-storage.js'
   ],

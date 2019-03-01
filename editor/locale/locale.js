@@ -242,7 +242,7 @@ export const readLang = async function (langData) {
     linejoin_miter: properties.linejoin_miter,
     linejoin_round: properties.linejoin_round,
     main_icon: tools.main_menu,
-    palette: ui.palette_info,
+    //palette: ui.palette_info,
     zoom_panel: ui.zoom_level,
     path_node_x: properties.node_x,
     path_node_y: properties.node_y,
