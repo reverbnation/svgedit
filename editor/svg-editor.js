@@ -161,6 +161,8 @@ const callbacks = [],
     'ext-redcircle.js',
     'ext-soccerball.js',
     'ext-svgshapes.js',
+    'ext-coach.js',
+    'ext-soccernet.js',
     'ext-storage.js'
   ],
   /**

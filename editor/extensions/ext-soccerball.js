@@ -1,7 +1,7 @@
-//steps to make a new single shape tool called "myshape"
+//Steps to make a new single shape tool called "myshape"
 //duplicate this file and rename to ext-myshape.js
 //rename all soccerball to myshape
-//pick a unique hotkey, button.key
+//Optional: pick a unique hotkey, button.key, see toolButtons in svg-edit.js
 //update the shape for call to addSVGElementFromJson
 //copy the extension/ext-locale/soccerball folder and contents to extension/ext-locale/myshape, edit language files
 //add the svg for you button icon to soccer-icons.xml with the id tool_myshape
@@ -43,7 +43,7 @@ export default {
       id: 'tool_' + name,
       type: 'mode',
       position: 8,
-      key: '.',
+      key: 'B',
       events: {
         click () {
           svgCanvas.setMode(name);

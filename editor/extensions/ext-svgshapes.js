@@ -37,11 +37,11 @@ export default {
           hexagon: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,149.99944l63.85715,-127.71428l170.28572,0l63.85713,127.71428l-63.85713,127.71428l-170.28572,0l-63.85715,-127.71428z"/></svg></svg>',
           star_points_5: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1,116.58409l113.82668,0l35.17332,-108.13487l35.17334,108.13487l113.82666,0l-92.08755,66.83026l35.17514,108.13487l-92.08759,-66.83208l-92.08757,66.83208l35.17515,-108.13487l-92.08758,-66.83026z"/></svg></svg>',
           arrow_up: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m1.49805,149.64304l148.50121,-148.00241l148.50121,148.00241l-74.25061,0l0,148.71457l-148.5012,0l0,-148.71457z"/></svg></svg>',
-          coach: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 20 50"><g><path d="m5.74539,4.33766c0,-2.12026 1.71741,-3.83766 3.83766,-3.83766c2.12026,0 3.83766,1.71741 3.83766,3.83766c0,2.12026 -1.7174,3.83766 -3.83766,3.83766c-2.12026,0 -3.83766,-1.71741 -3.83766,-3.83766zm12.90288,10.86304l0,-1.93813c0,-2.0392 -1.65217,-3.69255 -3.69255,-3.69255l-10.75722,0c-2.0392,0 -3.69255,1.65336 -3.69255,3.69255l0,1.93813c-0.00357,0.04399 -0.00595,0.08918 -0.00595,0.13495l0,11.16328c0,0.8674 0.70273,1.57012 1.57013,1.57012c0.86621,0 1.57072,-0.70272 1.57072,-1.57012l0,-10.998l1.05289,0l0,12.56931l0.00773,0l0,17.76005c0,1.15455 0.93756,2.0927 2.0933,2.0927c1.15634,0 2.0933,-0.93696 2.0933,-2.0927l0,-17.76005l1.38107,0l0,17.76005c0,1.15455 0.93814,2.0927 2.0933,2.0927c1.15633,0 2.0933,-0.93696 2.0933,-2.0927l0,-17.76005l0.00654,0l0,-12.56931l1.05289,0l0,10.9974c0,0.8674 0.7045,1.57072 1.57072,1.57072c0.86741,0 1.57013,-0.70331 1.57013,-1.57072l0,-11.16327c-0.00059,-0.04637 -0.00416,-0.09037 -0.00773,-0.13436z" fill="#eee" marker-end="none" stroke="#000" stroke-width="2"/></g></svg></svg>',
+          //coach: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="0 0 20 50"><g><path d="m5.74539,4.33766c0,-2.12026 1.71741,-3.83766 3.83766,-3.83766c2.12026,0 3.83766,1.71741 3.83766,3.83766c0,2.12026 -1.7174,3.83766 -3.83766,3.83766c-2.12026,0 -3.83766,-1.71741 -3.83766,-3.83766zm12.90288,10.86304l0,-1.93813c0,-2.0392 -1.65217,-3.69255 -3.69255,-3.69255l-10.75722,0c-2.0392,0 -3.69255,1.65336 -3.69255,3.69255l0,1.93813c-0.00357,0.04399 -0.00595,0.08918 -0.00595,0.13495l0,11.16328c0,0.8674 0.70273,1.57012 1.57013,1.57012c0.86621,0 1.57072,-0.70272 1.57072,-1.57012l0,-10.998l1.05289,0l0,12.56931l0.00773,0l0,17.76005c0,1.15455 0.93756,2.0927 2.0933,2.0927c1.15634,0 2.0933,-0.93696 2.0933,-2.0927l0,-17.76005l1.38107,0l0,17.76005c0,1.15455 0.93814,2.0927 2.0933,2.0927c1.15633,0 2.0933,-0.93696 2.0933,-2.0927l0,-17.76005l0.00654,0l0,-12.56931l1.05289,0l0,10.9974c0,0.8674 0.7045,1.57072 1.57072,1.57072c0.86741,0 1.57013,-0.70331 1.57013,-1.57072l0,-11.16327c-0.00059,-0.04637 -0.00416,-0.09037 -0.00773,-0.13436z" fill="#eee" marker-end="none" stroke="#000" stroke-width="2"/></g></svg></svg>',
           uml_actor: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" marker-end="none" d="m40.5,100l219,0m-108.99991,94.00006l107,105m-107.00009,-106.00006l-100,106m99.5,-231l0,125m33.24219,-158.75781c0,18.35916 -14.88303,33.24219 -33.24219,33.24219c-18.35916,0 -33.2422,-14.88303 -33.2422,-33.24219c0.00002,-18.35915 14.88304,-33.24219 33.2422,-33.24219c18.35916,0 33.24219,14.88304 33.24219,33.24219z"/></svg></svg>',
           cross: '<svg xmlns="http://www.w3.org/2000/svg"><svg viewBox="-15 -15 330 330"><path fill="none" stroke="#000" stroke-width="3" d="m0.99844,99.71339l98.71494,0l0,-98.71495l101.26279,0l0,98.71495l98.71495,0l0,101.2628l-98.71495,0l0,98.71494l-101.26279,0l0,-98.71494l-98.71494,0z"/></svg></svg>'
         },
-        scale: 0,
+        scale: 30,
         buttons: []
       }
     };
@@ -288,30 +288,8 @@ export default {
         // const y = startY + 10;
         // console.log("currentD " + currentD);
         
-        // let newshapetext = '{"element":"g","attr":{},"children":[{"element":"polygon","attr":{"points":"19.22 0 0 33.28 38.43 33.28 19.22 0","fill":"#364fc7"},"children":[]}]}';
-        // let newshapetext = '{"element":"g","attr":{},"children":[{"element":"polygon","attr":{"fill":"#364fc7","points":"19.22 0 0 33.28 38.43 33.28 19.22 0"},"children":[]}]}'
-        //let newshapetext ='{"element":"g","attr":{"id":"svg_4","fill-opacity":"1","stroke-opacity":"1"},"children":[{"element":"ellipse","attr":{"fill":"#000000","stroke":"#000000","stroke-width":"null","stroke-dasharray":"null","stroke-linejoin":"null","stroke-linecap":"null","fill-opacity":"0","style":"pointer-events:inherit","cx":"101","cy":"155","rx":"53","ry":"45","id":"svg_1","stroke-opacity":"1"},"children":[]},{"element":"ellipse","attr":{"fill":"#000000","stroke":"#000000","stroke-width":"null","stroke-dasharray":"null","stroke-linejoin":"null","stroke-linecap":"null","fill-opacity":"0","cx":"234","cy":"174","rx":"103","ry":"99","id":"svg_3","stroke-opacity":"1"},"children":[]}]}';
-        // const newShape = JSON.parse(newshapetext);
-
         const shape = new DOMParser().parseFromString(currentD,"image/svg+xml");
         const newShape = convertDomToJson(shape.documentElement);
-        // curShape = canv.addSVGElementFromJson({
-        //   element: 'path',
-        //   curStyles: true,
-        //   attr: {
-        //     d: currentD,
-        //     id: canv.getNextId(),
-        //     opacity: curStyle.opacity / 2,
-        //     style: 'pointer-events:none'
-        //   }
-        // });
-
-        // // Make sure shape uses absolute values
-        // if ((/[a-z]/).test(currentD)) {
-        //   currentD = curLib.data[curShapeId] = canv.pathActions.convertPath(curShape);
-        //   curShape.setAttribute('d', currentD);
-        //   canv.pathActions.fixEnd(curShape);
-        // }
 
         function svg_checkIDs (elem) {
           if (elem.attr && elem.attr.id) {
@@ -331,7 +309,7 @@ export default {
           let sx = (curLib.scale / lastBBox.width) || 1;
           let sy = (curLib.scale / lastBBox.height) || 1;
           sx = (sx+ sy) / 2;  
-          // console.log('scale ' + sx);
+          console.log('scale ' + sx);
           curShape.setAttribute('transform', 'translate(' + 0 + ',' + 0 + ') scale(' + sx + ') translate(' + -(lastBBox.x) + ',' + -(lastBBox.y) + ')');
         } else {
           // curShape.setAttribute('translate(' + -(lastBBox.x) + ',' + -(lastBBox.y) + ')');
