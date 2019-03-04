@@ -17,8 +17,7 @@ export default {
       // addElem = svgCanvas.addSVGElementFromJson,
       editingitex = false;
     const strings = await importLocale();
-    let selElems,
-      started, newFO;
+    let selElems, started, newFO, startX, startY, startX2, startY2, lastBBox;
 
       /**
     * @param {string} attr
@@ -64,12 +63,10 @@ export default {
           return undefined;
         }
         const zoom = svgCanvas.getZoom();
-        // console.log("Zoom is "+ zoom);
 
         // //these are relative to the canvas
-        // console.log("start at "+opts.start_x+","+opts.start_y);
-        const startX = opts.start_x * zoom;
-        const startY = opts.start_y * zoom;
+        startX = opts.start_x * zoom;
+        startY = opts.start_y * zoom;
 
         started = true;
         newFO = svgCanvas.addSVGElementFromJson(
@@ -235,6 +232,10 @@ export default {
         );
         svgCanvas.selectOnly([newFO]);
         svgCanvas.moveSelectedElements(startX, startY, false);
+        svgCanvas.recalculateDimensions(newFO);
+        lastBBox = newFO.getBBox();
+        startX2 = (lastBBox.x + lastBBox.width);
+        startY2 = (lastBBox.y + lastBBox.height);
 
         return {
           started: true
@@ -244,45 +245,61 @@ export default {
         if (!started || svgCanvas.getMode() !== this.name) {
           return undefined;
         }
+        const mode = svgCanvas.getMode();
+        const zoom = svgCanvas.getZoom();
+        const evt = opts.event;
 
-        return {
-          started: true
-        };
+        const x = opts.mouse_x / zoom;
+        const y = opts.mouse_y / zoom;
+
+        const tlist = svgCanvas.getTransformList(newFO)
+
+        let sx = (Math.abs(startX2 - x) / lastBBox.width) || 1;
+        let sy = (Math.abs(startY2 - y) / lastBBox.height) || 1;
+
+        // update the transform list with translate,scale,translate
+        const translateOrigin = svgroot.createSVGTransform(),
+          scale = svgroot.createSVGTransform(),
+          translateBack = svgroot.createSVGTransform();
+
+        // Not perfect, but mostly works...
+        let tx = 0;
+        if (x > startX2) {
+          tx = lastBBox.width;
+        }
+        let ty = 0;
+        if (y > startY2) {
+          ty = lastBBox.height;
+        }
+
+        translateOrigin.setTranslate(-(lastBBox.x+lastBBox.width-tx), -(lastBBox.y+lastBBox.height-ty));
+
+        if (evt.shiftKey) {
+          const max = Math.min(Math.abs(sx), Math.abs(sy));
+
+          sx = max * (sx < 0 ? -1 : 1);
+          sy = max * (sy < 0 ? -1 : 1);
+        }
+        scale.setScale(sx, sy);
+                
+        translateBack.setTranslate(x+tx,y+tx);// * sx,y * sy);
+
+        tlist.appendItem(translateBack);
+        tlist.appendItem(scale);
+        tlist.appendItem(translateOrigin);
+        
+        svgCanvas.recalculateDimensions(newFO);
+
+        lastBBox = newFO.getBBox();
       },
       mouseUp (opts) {
         if (svgCanvas.getMode() !== this.name) {
           return undefined;
         }
-        // const attrs = $(newFO).attr('edge');
-        // const keep = (attrs.edge !== '0');
-        // // svgCanvas.addToSelection([newFO], true);
         return {
           keep: true,
           element: newFO
         };
-      // },
-      // selectedChanged (opts) {
-      //   // Use this to update the current selected elements
-      //   const elem = singleSelectedObject(opts);
-      //   if (elem != null) {
-      //     showPanel(true);
-      //     if ((typeof(elem.lastChild.firstChild) != 'undefined') && (elem.lastChild.firstChild != null)) {
-      //       console.log(elem.lastChild.firstChild.textContent);
-      //       $('#' + name + '_pos').val(elem.lastChild.firstChild.textContent);
-      //     }
-      //   } else {
-      //     showPanel(false);
-      //   }
-      // },
-      // elementChanged (opts) {
-      //   console.log('elementChanged');
-      //   const elem = singleSelectedObject(opts);
-      //   if (elem != null) {
-      //     showPanel(true);
-      //     elem.lastChild.innerHTML = $('#' + name + '_pos').val()
-      //   } else {
-      //     showPanel(false);
-      //   }
       }
     };
   }

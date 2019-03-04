@@ -2,7 +2,7 @@ export default {
   name: 'soccernet',
   buttons: [
     {
-      title: 'Net'
+      title: 'Goal'
     }
   ]
 };
