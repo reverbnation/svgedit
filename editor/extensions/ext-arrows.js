@@ -15,7 +15,7 @@ export default {
         type: 'select',
         panel: 'arrow_panel',
         id: 'arrow_list',
-        defval: 'end',
+        defval: 'none',
         events: {
           change: setArrow
         }
@@ -237,7 +237,7 @@ export default {
 
         // Check if last marker can be removed
         let remove = true;
-        $(S.svgcontent).find('line, polyline, path').each(function () {
+        $(S.svgcontent).find('line, path').each(function () {
           const element = this; // eslint-disable-line consistent-this
           $.each(mtypes, function (j, mtype) {
             if ($(element).attr('marker-' + mtype) === 'url(#' + marker.id + ')') {
@@ -277,7 +277,7 @@ export default {
         // Use this to update the current selected elements
         selElems = opts.elems;
         console.log('arrow selectedChanged');
-        const markerElems = ['line', 'path', 'polyline'];
+        const markerElems = ['line', 'path'];
         if (selElems.length == 1) {
           if (selElems[0] && markerElems.includes(selElems[0].tagName)) {
             arrowShowPanel(true);
@@ -289,18 +289,18 @@ export default {
         }
       },
       elementChanged (opts) {
-        const elem = opts.elems[0];
-        if (elem && (
-          elem.getAttribute('marker-start') ||
-          elem.getAttribute('marker-mid') ||
-          elem.getAttribute('marker-end')
-        )) {
-          // const start = elem.getAttribute('marker-start');
-          // const mid = elem.getAttribute('marker-mid');
-          // const end = elem.getAttribute('marker-end');
-          // Has marker, so see if it should match color
-          colorChanged(elem);
-        }
+        // const elem = opts.elems[0];
+        // if (elem && (
+        //   elem.getAttribute('marker-start') ||
+        //   elem.getAttribute('marker-mid') ||
+        //   elem.getAttribute('marker-end')
+        // )) {
+        //   // const start = elem.getAttribute('marker-start');
+        //   // const mid = elem.getAttribute('marker-mid');
+        //   // const end = elem.getAttribute('marker-end');
+        //   // Has marker, so see if it should match color
+        //   colorChanged(elem);
+        // }
       }
     };
   }
